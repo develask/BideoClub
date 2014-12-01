@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.15
+4 verbose read json /home/mikel/Desktop/bideoklub/package.json
+5 warn package.json bideoklub@ No README.md file found!
+6 verbose run-script [ 'prestart', 'start', 'poststart' ]
+7 info prestart bideoklub@
+8 info start bideoklub@
+9 verbose unsafe-perm in lifecycle true
+10 silly exec sh "-c" "nw /home/mikel/Downloads/node-webkit-v0.8.5-linux-x64/"
+11 silly sh,-c,nw /home/mikel/Downloads/node-webkit-v0.8.5-linux-x64/,/home/mikel/Desktop/bideoklub spawning
+12 info bideoklub@ Failed to exec start script
+13 error bideoklub@ start: `nw /home/mikel/Downloads/node-webkit-v0.8.5-linux-x64/`
+13 error `sh "-c" "nw /home/mikel/Downloads/node-webkit-v0.8.5-linux-x64/"` failed with 127
+14 error Failed at the bideoklub@ start script.
+14 error This is most likely a problem with the bideoklub package,
+14 error not with npm itself.
+14 error Tell the author that this fails on your system:
+14 error     nw /home/mikel/Downloads/node-webkit-v0.8.5-linux-x64/
+14 error You can get their info via:
+14 error     npm owner ls bideoklub
+14 error There is likely additional logging output above.
+15 error System Linux 3.11.0-18-generic
+16 error command "/usr/bin/nodejs" "/usr/bin/npm" "start"
+17 error cwd /home/mikel/Desktop/bideoklub
+18 error node -v v0.10.15
+19 error npm -v 1.2.18
+20 error code ELIFECYCLE
+21 verbose exit [ 1, true ]

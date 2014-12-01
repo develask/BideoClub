@@ -1,0 +1,89 @@
+var user;
+$(document).ready(function() {
+    $("section").hide();
+    $("#login").fadeIn();
+    $("#sartu").on("click", function(){
+        var izena = $("#login > form > input")[0].value;
+        var abizena = $("#login > form > input")[1].value;
+        var pass = $("#login > form > input")[2].value;
+        //aqui hay que elegir entre administrador y bezero por lo tanto comento la parte del bezero.
+        //logeatu(izena,abizena,pass);
+        try{
+            user = new User(izena,abizena,pass);
+            if (user.getEgoera() == "2"){
+                $("#nagusia > nav ul li.admin").css("display", "inline-block");
+            }
+            $("#login").fadeOut(200,function (){
+                $("#nagusia").fadeIn(200);
+                $("#phartu").slideDown("slow");
+        }catch(Exception){
+            $("#login input")[2].value = "";
+            alert("Datuak ez datoz bat");
+        }
+    });
+    $("#logout").on("click", function(){
+        $("#nagusia").fadeOut(200,function (){
+            $("#login input")[0].value = "";
+            $("#login input")[1].value = "";
+            $("#login input")[2].value = "";
+            user=null;
+            $("#login").fadeIn(200);
+             $("article").slideUp("slow");
+            $("#nagusia > nav ul li.admin").css("display", "none");
+        });
+        
+    });
+    $("#nagusia > nav ul li").on("click", function(){
+        var pag = $(this).attr("name");
+        $("article").slideUp("slow");
+        setTimeout(function (){
+            $("#"+pag).slideDown("slow");
+        }, 600);
+    });
+    
+    //Datu pertsonalak aldatu
+    $("#datuakModifikatu").on("click",function(){
+        var izena = $("#datupertsonalak input")[0].value;
+        var abizena = $("#datupertsonalak input")[1].value;
+        var helbidea = $("#datupertsonalak input")[2].value;
+        var pass1 = $("#datupertsonalak input")[3].value;
+        var pass2 = $("#datupertsonalak input")[4].value;
+        if(pass1==pass2){
+            user.setIzena(izena);
+            user.setAbizena(abizena);
+            user.setHelbidea(Helbidea);
+            user.setPasahitza(pass1);
+        }else{
+            $("#datupertsonalak input")[3].value="";
+            $("#datupertsonalak input")[4].value="";
+            alert("Pasahitzak ez datoz bat");
+        }
+    });
+    
+    //kreditua kargatu
+    $("#dirua1").on("change", function(){
+        $("#dirua2").html(this.value);
+    });
+    
+    //pelikula hartu
+    $("#phartu input").on("change",function(){
+        var inputs = $("#phartu input");
+        console.log(inputs[0].value + "\n" + inputs[1].value + "\n" + inputs[2].value + ": " + inputs[2].checked + "\n" + inputs[3].value + ": " + inputs[3].checked +  "\n" + inputs[4].value + ": " + inputs[4].checked);
+    });
+});
+var gui = require("nw.gui");
+var win =gui.Window.get();
+win.on('closed', function() {
+    win = null;
+  });
+gui.Window.get().on("close",function(){
+    this.hide();
+    konexioaItxi();
+    setTimeout(function(){console.log("fff");},3000);
+    // If the new window is still open then close it.
+    if (win != null){
+      win.close(true);
+    }
+    // After closing the new window, close the main window.
+    this.close(true);
+});

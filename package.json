@@ -1,0 +1,11 @@
+{
+  "name": "bideoklub",
+  "description": "bideoklubaren datubasea",
+  "main": "index.html",
+  "window": {
+    "toolbar": false,
+    "width": 660,
+    "height": 700,
+    "resizable": false
+  }
+}

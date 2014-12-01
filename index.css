@@ -1,0 +1,247 @@
+body{
+    background-color: #71c3ff;
+    margin:0;
+}
+#login h5 {
+    text-align: center;
+    padding: 10px;
+    font-family:georgia;
+    font-size:250%;
+    font-weight:bold;
+    color: purple;
+    font-style: normal; 
+    border-color: white;
+    border-style:solid;
+    border-radius: 2em;
+    border-width: medium;
+    margin: 1em 15px; 
+}
+#login > form {
+    margin: 22%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2em;
+    border-radius: 2em;
+    width: 49%;
+    text-align: center;
+    background-color: #002e95;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+#login > form > * {
+    display: inline-block;
+}
+#login > form > p{
+    width: 100px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+#login  input {
+    background-color: white;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#login > #sartu {
+    padding: 5px 10px;
+    border-radius: 1em;
+}
+
+#signin h5 {
+    text-align: center;
+    padding: 10px;
+    font-family:georgia;
+    font-size:250%;
+    font-weight:bold;
+    color: purple;
+    font-style: normal; 
+    border-color: white;
+    border-style:solid;
+    border-radius: 2em;
+    border-width: medium;
+    margin: 1em 15px; 
+}
+#signin > form {
+    margin: 22%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2em;
+    border-radius: 2em;
+    width: 49%;
+    text-align: center;
+    background-color: #002e95;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+#signin > form > * {
+    display: inline-block;
+}
+#signin > form > p{
+    width: 100px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+}
+#signin  input {
+    background-color: white;
+    font-weight: bold;
+    padding-left: 10px;
+}
+#signin > #sartu {
+    padding: 5px 10px;
+    border-radius: 1em;
+}
+
+/* ------------------------------------------  */
+
+#nagusia > header {
+    background-color: #01c93e;
+    text-align: center;
+    margin: 0;
+}
+#nagusia > header > * {
+    display: inline-block;
+}
+#nagusia > header a {
+    padding: 1em;
+    position: absolute;
+    right: 0px;
+    border-radius: 1em;
+}
+#nagusia > header a:hover {
+    background-color: #f8cf3e;
+}
+#nagusia > nav {
+    margin-top: -16px;
+}
+#nagusia > nav ul {
+    padding: 0;
+    text-align:center;
+    background-color: #243138;
+}
+#nagusia > nav ul li {
+    list-style-type: none;
+    display:inline-block;
+    vertical-align: top;
+    background-color:#243138;
+    margin: 4;
+    padding: 7px 7px;
+    text-align:center;
+    border-radius: 10em;
+}
+#nagusia > nav ul li:hover {
+    background-color:#f8cf3e;
+    border-color:white;
+    border-width: 2px;
+}
+
+#nagusia > nav ul p{
+    margin: 0;
+    color: white;
+}
+/*.admin*/
+#nagusia > nav ul li.admin{
+    display: none;
+}
+
+#nagusia article {
+    display: none;
+}
+#nagusia article{
+    margin: auto;
+    padding: 2em;
+    padding-top: 0;
+    border-radius: 2em;
+    color: white;
+    width: 70%;
+    text-align: center;
+    background-color: #002e95;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+#nagusia article .form p{
+    display: inline-block;
+    width: 140px;
+}
+ #nagusia article .form input{
+    display: inline-block;
+}
+span {
+    margin: 0px 20px;
+}
+span.junto{
+    margin: 0;
+}
+#pbueltatu .form li{
+    list-style-type: none;
+}
+#pelikulendatuak{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+#pelikulendatuak > li {
+    list-style-type: none;
+    color:black;
+    text-transform:capitalize;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.81);
+}
+#pelikulendatuak > li.libre{
+    border-left: solid #00c417 5px;
+}
+#pelikulendatuak > li.deskatalogatuta{
+    border-left: solid red 5px;
+}
+#pelikulendatuak > li.alokatuta{
+    border-left: solid orange 5px;
+}
+#pelikulendatuak > li p {
+    text-align:left;
+    display:inline-block;
+    width: 75%;
+}
+#pelikulendatuak > li span {
+    text-align:right;
+    display:inline-block;
+    width:15%;
+}
+
+#alP{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+#alP > li {
+    list-style-type: none;
+    color:black;
+    text-transform:capitalize;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 2px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.81);
+}
+#alP > li p {
+    text-align:left;
+    display:inline-block;
+    width: 75%;
+}
+#alP > li span {
+    text-align:right;
+    display:inline-block;
+    width:15%;
+}
+
+
+
+
+
+
+

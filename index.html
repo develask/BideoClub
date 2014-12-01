@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <title>Bideoklub</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="jquery-2.1.0.min.js"></script>
+        <script src="login.js"></script>
+        <script src="db.js"></script>
+    </head>
+    <body>
+        <section id="login">
+            <h5>BIDEOKLUB BORJAMARI ETA POTXOLO</h5>
+            <form>
+                <p>Izena: </p><input type="text"/><br/>
+                <p>Abizena: </p><input type="text"/><br/>
+                <p>Pasahitza: </p><input type="password"/><br/>
+                <input id="sartu" type="button" value="Sartu"/><br/><br/>
+                <input id="sign" type="button" value="Usuarioa sortu"/>
+            </form>                                                                                                                    
+        </section>
+        <section id="signin">
+            <h5>BIDEOKLUB BORJAMARI ETA POTXOLO</h5>
+            <form>
+                <p>Izena: </p><input type="text"/><br/>
+                <p>Abizena: </p><input type="text"/><br/>
+                <p>Pasahitza: </p><input type="password"/><br/>
+                <p>Pasahitza errepikatu: </p><input type="password"/><br/>
+                <p>Helbidea: </p><input type="email"/><br/>
+                <input id="signinboton" type="button" value="altan eman"/><br/><br/>
+                <input id="back" type="button" value="konntua daukat"/>
+            </form>
+        </section>
+        <section id="nagusia">
+            <header>
+                <h1>Izena Abizena</h1>
+                <a id="logout">Log out</a>
+            </header>
+            <nav>
+                <ul>
+                    <li name="datupertsonalak"><p>Datu pertsonalak aldatu</p></li>
+                    <li name="rekargatu"><p>Kreditua rekargatu</p></li>
+                    <li name="phartu"><p>Pelikula hartu</p></li>
+                    <li name="pbueltatu"><p>Pelikula bueltatu</p></li>
+                    <li class="admin" name="bzegoera"><p>Bezero baten egoera aldatu</p></li>
+                    <li class="admin" name="paltan"><p>Pelikula altan eman</p></li>
+                    <li class="admin" name="pbajan"><p>Pelikula bajan eman</p></li>
+                </ul>
+            </nav>
+            <article id="bzegoera">
+                <h2>Bezero baten egoera aldatu:</h2><hr/>
+
+                <div class="form">
+                    <p>Bezeroaren Izena: </p><input id="bezlist" list="bezeroak"/><br/>
+                    <p>Bezeroaren Abizena</p><input list="bezAbizenak"><br/>
+                    <datalist id="bezeroak">
+                    </datalist>
+                    <datalist id="bezAbizenak">
+                    </datalist>
+                    <select>
+                      <option value="2">admin</option>
+                      <option value="1">normal</option>
+                      <option value="0">Bezeroa ez da</option>
+                    </select><br/><br/>
+                    <input id="Aldatu" type="button" value="aldatu"> 
+                </div>
+                <hr/>
+                <input id="Erakutsi" type="button" value="Bezeroaren datuak erakutsi"/>
+                <div id="bezDatuak"></div>
+            </article>
+            <article id="paltan">
+                <h2>Pelikula bat altan eman</h2><hr/>
+
+                <div class="form">
+                    <p>Pelikularen tituloa: </p><input type="text"/><br/>
+                    <p>prezioa: </p><input type="number" value="0.01" step="0.01" max="50" min="0.01"/><br/>
+                    <input id="Pelikula-igo" type="button" value="Pelikula igo"/>
+                </div>                                                                                                                    
+            </article>
+             <article id="pbajan">
+                <h2>Pelikula bat kendu</h2><hr/>
+
+                <div class="form">
+                     <p>Pelikularen izena</p>
+                    <input list="pelikulak"/><br/>
+                    <datalist id="pelikulak">
+                    </datalist>
+                    <input id="ezabatu" type="button" value="kendu"/><br/>
+                    <input id="erakutsiDatuak" type="button" value="Pelikularen datuak erakutsi"/> 
+                </div> 
+                 <div id="pelidat"></div>
+            </article>
+
+            <article id="datupertsonalak">
+                <h2>Datu pertsonalak aldatu:</h2><hr/>
+                <div class="form">
+                    <p>Izena: </p><input type="text"/><br/>
+                    <p>Abizena: </p><input type="text"/><br/>
+                    <p>Helbidea: </p><input type="text"/><br/>
+                    <p>Pasahitza: </p><input type="password"/><br/>
+                    <p>Pasahitza errepikatu: </p><input type="password"/><br/>
+                    <input id="datuakModifikatu" type="button" value="Datuak aldatu"/>
+                </div>                                                                                                                    
+            </article>
+            <article id="rekargatu">
+                <h2>Kreditua rekargatu</h2><hr/>
+
+                <div class="form">
+                    <p>Dirua: </p><input id="dirua1" type="range" min="0" value="0" max="50"/><span id="dirua2">20</span><br/>
+                    <input id="rekarga" type="button" value="rekargatu"/>
+                </div>                                                                                                                    
+            </article>
+             <article id="phartu">
+                <h2>Pelikula hartu:</h2><hr/>
+
+                <div class="form">
+                    <input type="text" placeholder="Pelikula izena"/><br/>
+                    <p>prezioa &nbsp; &le; <span id="dirua3">0</span></p><input type="range" max="50" min="0" value="50"><br/>
+                    <p style="width:70px;">egoera: </p>
+                    <input class="junto" type="checkbox" value="libre" checked/><span class="junto">libre</span>
+                    <input class="junto" type="checkbox" value="alokatuta"/><span class="junto">alokatuta</span>
+                    <input class="junto" type="checkbox" value="deskatalogatuta"/><span class="junto">deskatalogatuta</span><br/>
+                    <p>Ordenatu: </p><input type="radio" name="ordenatu" value="prezioa" checked>prezioa
+                    <input type="radio" name="ordenatu" value="tituloa">tituloa
+                </div>
+                 <hr/>
+                 <ul id="pelikulendatuak">
+                 </ul>
+            </article>
+              <article id="pbueltatu">
+                <h2>Pelikula bueltatu:</h2><hr/>
+
+                <div class="form">
+                    <ul>
+                    </ul>
+                    <input id="pbueltatub" type="button" value="bueltatu">
+                </div>                                                                                                                    
+            </article>
+        </section>
+    </body>
+</html>
